@@ -29,7 +29,10 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN         apt update && apt upgrade -y && apt install -y tar curl gcc-13-multilib g++-13-multilib lib32stdc++6 iproute2 gdb telnet net-tools netcat tzdata numactl tini && useradd -m -d /home/container container
+RUN         apt-get update \ 
+			&& apt-get upgrade -y \ 
+			&& apt-get install -y tar curl gcc-13-multilib g++-13-multilib lib32stdc++6 iproute2 gdb telnet net-tools netcat tzdata numactl tini \ 
+			&& useradd -m -d /home/container container
 
 USER        container
 ENV         USER=container HOME=/home/container
