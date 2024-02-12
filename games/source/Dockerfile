@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH debian:bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH ubuntu:mantic
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
