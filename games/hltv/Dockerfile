@@ -31,7 +31,7 @@ ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         apt-get update \ 
 			&& apt-get upgrade -y \ 
-			&& apt-get install -y tar curl gcc-13-multilib g++-13-multilib lib32stdc++6 iproute2 gdb telnet net-tools netcat tzdata numactl tini \ 
+			&& apt-get install -y tar curl gcc-13-multilib g++-13-multilib lib32stdc++6 iproute2 gdb telnet net-tools tzdata numactl tini \ 
 			&& useradd -m -d /home/container container
 
 USER        container
