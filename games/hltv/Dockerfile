@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH debian:bullseye
+FROM        --platform=$TARGETOS/$TARGETARCH ubuntu:mantic
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
@@ -29,9 +29,7 @@ LABEL       org.opencontainers.image.licenses=MIT
 
 ENV         DEBIAN_FRONTEND=noninteractive
 
-RUN         apt update \
-			&& apt upgrade -y \
-			&& apt install -y --no-install-recommends tar curl ca-certificates gcc-13-multilib g++-13-multilib lib32gcc-s1 libc6 libc6-dev libcurl4-gnutls-dev:i386 libssl1.1:i386 libcurl4:i386 lib32tinfo6 libtinfo6:i386 lib32z1 lib32stdc++6 libncurses5:i386 libcurl3-gnutls:i386 libsdl2-2.0-0:i386 iproute2 gdb libsdl1.2debian libfontconfig1 telnet net-tools netcat tzdata \
+RUN			apt update && apt upgrade -y \
 			&& useradd -m -d /home/container container
 
 USER        container
