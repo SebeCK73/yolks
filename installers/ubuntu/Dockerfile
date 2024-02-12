@@ -31,4 +31,4 @@ ENV         DEBIAN_FRONTEND=noninteractive
 
 RUN         apt update \
 		&& apt upgrade -y \
-		&& apt -y --no-install-recommends install ca-certificates curl git unzip zip tar jq
+		&& apt install -y tar curl gcc-13-multilib g++-13-multilib lib32stdc++6 iproute2 gdb telnet net-tools tzdata numactl tini
