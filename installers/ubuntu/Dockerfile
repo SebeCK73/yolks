@@ -20,7 +20,7 @@
 # SOFTWARE.
 #
 
-FROM        --platform=$TARGETOS/$TARGETARCH ubuntu:mantic
+FROM        ubuntu:mantic
 
 LABEL       author="Matthew Penner" maintainer="matthew@pterodactyl.io"
 
