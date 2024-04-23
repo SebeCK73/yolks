@@ -26,8 +26,8 @@
 sleep 1
 
 # Default the TZ environment variable to UTC.
-TZ=${TZ:-UTC}
-export TZ
+#TZ=${TZ:-UTC}
+export TZ="Europe/Warsaw"
 
 # Set environment variable that holds the Internal Docker IP
 INTERNAL_IP=$(ip route get 1 | awk '{print $(NF-2);exit}')
